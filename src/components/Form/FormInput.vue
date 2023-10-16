@@ -18,7 +18,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'text'
+      default: "text"
     },
     value: {
       type: String,
@@ -36,30 +36,30 @@ export default {
 
   computed: {
     error() {
-      return this.validate(this.value)
+      return this.validate(this.value);
     }
   },
 
   methods: {
     validate(value) {
       if (this.rules.required && value.length === 0) {
-        return 'This value is required.'
+        return "This value is required.";
       }
 
       if (this.rules.min && value.length < this.rules.min) {
-        return `The minimum length ${this.rules.min}.`
+        return `The minimum length ${this.rules.min}.`;
       }
     },
 
     input($event) {
-      this.$emit('update', {
+      this.$emit("update", {
         name: this.name.toLowerCase(),
         value: $event.target.value,
         valid: !this.validate($event.target.value)
-      })
+      });
     }
   }
-}
+};
 </script>
 
 <style scoped>

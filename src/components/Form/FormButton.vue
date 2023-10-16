@@ -9,17 +9,17 @@
 
 <script>
 export default {
-props: {
-  background: {
-    type: String
-  },
-  color: {
-    type: String
-  },
-  disabled: {
-    type: Boolean
+  props: {
+    background: {
+      type: String
+    },
+    color: {
+      type: String
+    },
+    disabled: {
+      type: Boolean
+    }
   }
-}
 }
 
 </script>
@@ -28,6 +28,7 @@ props: {
 button:disabled {
   opacity: 0.5;
 }
+
 button {
   display: block;
   background: none;
@@ -38,7 +39,8 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+
 button:hover {
-  filter:  brightness(125%);
+  filter: brightness(125%);
 }
 </style>
